@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="word"
+            type="String" />
+
+        <variable
+            name="phonetic"
+            type="String" />
+
+        <variable
+            name="origin"
+            type="String" />
+
+        <variable
+            name="meaning"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{word}"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Bank" />
+
+
+        <TextView
+            android:id="@+id/tv_phonetic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{phonetic}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_word"
+            tools:text="bankk" />
+
+        <TextView
+            android:id="@+id/tv_origin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="0dp"
+            android:text="@{origin}"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phonetic"
+            tools:text="jlkasjdkl askljdkasd a klajsdkl aklsdjlksjdaksjdl aslkjdkasjd qwkeljqwkl " />
+
+        <TextView
+            android:id="@+id/tv_meaning"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="0dp"
+            android:text="@{meaning}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_origin"
+            tools:text="asdasd asdasd asdasd asdasdasdasdasdasd" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
